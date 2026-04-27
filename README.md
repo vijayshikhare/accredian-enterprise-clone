@@ -1,45 +1,46 @@
-# Accredian Enterprise - Partial Clone
+# Accredian Enterprise - Professional Clone
 
 A premium, industry-level enterprise landing page built with **Next.js 14**, **Tailwind CSS**, and **TypeScript**. This project is a functional clone of [Accredian Enterprise](https://enterprise.accredian.com/), optimized for performance, responsiveness, and professional aesthetics.
 
 ## 🚀 Live Demo
-[Live Deployment Link - Vercel](https://accredian-enterprise-clone.vercel.app/)
+[https://accredian-enterprise-clone.netlify.app/](https://accredian-enterprise-clone.netlify.app/)
 
 ## ✨ Key Features
-- **Multi-Page Architecture**: Dedicated pages for Solutions, Curriculum, Impact, and About Us.
+- **Multi-Page Architecture**: Dedicated routes for Solutions, Curriculum, Impact, and About Us.
 - **Premium UI/UX**: High-end typography, glassmorphism effects, smooth animations, and a modern enterprise color palette.
-- **Lead Capture System**: Functional contact form integrated with a **Next.js API Route** for real-time data handling (Bonus requirement).
-- **Interactive Elements**: Auto-scrolling partner marquee with original brand colors, interactive stats, and hover-responsive capability cards.
-- **Mobile First**: Fully responsive design across all viewports (Mobile, Tablet, Laptop, Desktop).
-- **Smooth Navigation**: Global scroll-smoothing and active-state tracking in the Navbar.
+- **Lead Capture System**: Functional contact form integrated with a **Next.js API Route** for real-time data handling.
+- **Responsive Navigation**: Advanced mobile drawer menu with right-side slide animation and background scroll locking.
+- **Dynamic Content**: Auto-scrolling partner marquee with original brand colors, interactive stats, and hover-responsive capability cards.
+- **Fully Responsive**: Meticulously calibrated for all screen sizes, from mobile phones to high-resolution laptops.
 
 ## 🛠 Tech Stack
 - **Framework**: Next.js 14 (App Router)
 - **Styling**: Tailwind CSS
 - **Icons**: Lucide React
 - **Language**: TypeScript
-- **State Management**: React Hooks (useState, useEffect)
-- **Deployment**: Vercel
+- **Deployment**: Netlify / Vercel
 
 ## 🤖 AI Usage Explanation
 
-### Where AI Helped:
-- **Scaffolding**: Used AI to generate the initial boilerplate for Next.js components and Tailwind configurations.
-- **Content Strategy**: AI assisted in drafting professional, enterprise-grade copy that aligns with the target audience (CIOs, HR Heads).
-- **Complex Logic**: Used AI to refine the infinite marquee animation and the scroll-aware Navbar logic.
-- **API Routing**: Scaffolded the structure for the Next.js API POST route for lead capture.
+### Which AI tools did you use?
+- **ChatGPT / Claude**: Used for architectural brainstorming, drafting enterprise-grade copy, and scaffolding initial component structures.
+- **IDE AI Assistant**: Used for rapid Tailwind class suggestions and debugging logic for the infinite marquee and scroll-aware Navbar.
 
-### Manual Improvements & Refinements:
-- **Visual Calibration**: Manually adjusted every pixel of padding and margin to ensure a "perfect fit" on standard laptop screens.
-- **Color Correction**: Fine-tuned HEX codes to match the authentic Accredian brand colors.
-- **Layout Engineering**: Custom-built the 3-part vertical flex stack in the Hero section to prevent content clipping.
-- **Z-Index Management**: Manually handled layering to ensure overlapping elements (like the "Future Ready" badge) render perfectly.
-- **UX Refinement**: Added tactile feedback like `active:scale-95` on buttons for a more responsive app-like feel.
+### Where did AI help you the most?
+AI was most effective in **rapid scaffolding** and **content generation**. It helped quickly set up the Next.js App Router structure and provided professional, industry-aligned text that matches the "Accredian Enterprise" brand voice.
+
+### What did you modify or improve manually (beyond AI output)?
+- **Viewport Calibration**: Manually engineered the Hero section using a 3-part vertical flex stack to ensure the "first fold" fits laptop screens perfectly without clipping.
+- **Mobile Navigation**: Custom-built the right-side drawer menu and implemented background scroll-locking logic.
+- **Visual Polish**: Manually managed Z-index layering, refined HEX codes for brand accuracy, and added tactile feedback (active-scaling) to all interactive elements.
+
+### Did you face any incorrect AI-generated code? How did you handle it?
+Yes, the AI initially suggested a single-page scrolling logic that conflicted with the multi-page route structure. I refactored the Navbar to use `usePathname` and standard Next.js `Link` components to ensure persistent active states across pages.
 
 ## 🚀 Setup Instructions
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/accredian-enterprise.git
+   git clone https://github.com/your-username/accredian-enterprise-clone.git
    ```
 2. Install dependencies:
    ```bash
@@ -54,8 +55,7 @@ A premium, industry-level enterprise landing page built with **Next.js 14**, **T
    npm run build
    ```
 
-## 📈 Future Improvements (with more time)
-- **CMS Integration**: Connect with Sanity.io or Contentful to allow marketing teams to update content dynamically.
-- **Framer Motion**: Implement advanced scroll-reveal animations for an even more "premium" feel.
-- **A/B Testing**: Integrate tracking to optimize the CTA button placements.
-- **Auth Portal**: Create a separate dashboard for enterprise clients to monitor their team's learning progress.
+## 📈 Future Improvements
+- **CMS Integration**: Connect with Sanity.io for dynamic content updates.
+- **Advanced Animations**: Integrate Framer Motion for scroll-triggered reveal effects.
+- **Auth Portal**: Create a dashboard for enterprise clients to monitor learning progress.

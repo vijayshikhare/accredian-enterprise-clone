@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { ArrowRight, PlayCircle } from 'lucide-react';
 
 const partners = [
@@ -20,7 +21,7 @@ const Hero = () => {
       {/* 1. Navbar Spacer */}
       <div className="h-20 lg:h-24 flex-shrink-0" />
 
-      {/* 2. Main Content - Optimized for all screens */}
+      {/* 2. Main Content */}
       <div className="flex-grow flex items-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full relative z-10 py-10 lg:py-4">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-4 w-full">
 
@@ -42,19 +43,26 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start pt-2">
-              <button className="bg-primary text-white px-8 py-4 rounded-xl font-black text-sm lg:text-base flex items-center justify-center gap-2 hover:bg-blue-700 transition-all shadow-xl shadow-blue-200 hover:-translate-y-0.5 active:scale-95">
+              <Link
+                href="/#contact"
+                className="bg-primary text-white px-8 py-4 rounded-xl font-black text-sm lg:text-base flex items-center justify-center gap-2 hover:bg-blue-700 transition-all shadow-xl shadow-blue-200 hover:-translate-y-0.5 active:scale-95 no-underline"
+              >
                 Book a Free Demo <ArrowRight size={18} />
-              </button>
-              <button className="flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-black text-sm lg:text-base text-slate-700 bg-white hover:bg-slate-50 transition-all border border-slate-200 shadow-sm active:scale-95">
+              </Link>
+              <a
+                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-black text-sm lg:text-base text-slate-700 bg-white hover:bg-slate-50 transition-all border border-slate-200 shadow-sm active:scale-95 no-underline"
+              >
                 <PlayCircle className="text-primary" size={20} /> Watch Story
-              </button>
+              </a>
             </div>
           </div>
 
-          {/* Right Image Column - Now visible on mobile! */}
+          {/* Right Image Column */}
           <div className="flex-1 relative w-full flex justify-center lg:justify-end items-center mt-8 lg:mt-0">
             <div className="relative w-full max-w-[450px] lg:max-w-none transform lg:scale-110 lg:translate-x-8">
-              {/* Main Image Container */}
               <div className="relative z-10 rounded-[2.5rem] lg:rounded-[3rem] overflow-hidden shadow-[0_25px_50px_-12px_rgba(0,0,0,0.12)] border-[8px] lg:border-[12px] border-white aspect-square sm:aspect-video lg:aspect-[4/3] xl:aspect-[16/10]">
                 <img
                   src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200"
@@ -63,7 +71,6 @@ const Hero = () => {
                 />
               </div>
 
-              {/* Premium Floating Badge - Responsive scaling */}
               <div className="absolute -bottom-4 lg:-bottom-6 -left-4 lg:-left-10 z-20 bg-white/95 backdrop-blur-md p-4 lg:p-6 rounded-2xl lg:rounded-[2.5rem] shadow-2xl border border-white/20 animate-bounce-slow">
                 <div className="flex items-center gap-3 lg:gap-5">
                   <div className="w-10 lg:w-14 h-10 lg:h-14 bg-primary rounded-xl lg:rounded-2xl flex items-center justify-center text-white shadow-xl">
@@ -80,7 +87,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* 3. Bottom Fold: Trusted by Titans */}
+      {/* 3. Bottom Fold */}
       <div className="w-full bg-white border-t border-slate-100 py-6 lg:py-8 flex-shrink-0 relative z-10">
         <div className="max-w-7xl mx-auto px-4 mb-4">
           <div className="flex items-center gap-3">
@@ -88,7 +95,6 @@ const Hero = () => {
             <div className="h-px w-full bg-slate-100 opacity-40" />
           </div>
         </div>
-
         <div className="relative overflow-hidden">
           <div className="flex animate-marquee whitespace-nowrap gap-12 lg:gap-24 items-center">
             {[...partners, ...partners].map((partner, index) => (
